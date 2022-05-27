@@ -1,4 +1,4 @@
-module Mitake
+module MitakeApi
   class Message
     attr_reader :message
 

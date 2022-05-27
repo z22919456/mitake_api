@@ -1,4 +1,4 @@
-module Mitake
+module MitakeApi
   class Api < SMSProvider::Base
     attr_reader :message, :settings
 

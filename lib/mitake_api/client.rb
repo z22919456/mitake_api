@@ -1,7 +1,7 @@
 require 'faraday'
 # require 'faraday_middleware'
 Faraday.default_adapter = :net_http
-module Mitake
+module MitakeApi
   class Client
     attr_reader :url, :charset, :mitake_msg, :response
 
