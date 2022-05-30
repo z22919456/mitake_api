@@ -1,5 +1,5 @@
 module MitakeApi
-  class SMSProvider < SMSProvider::Base
+  class SMSProvider
     attr_reader :message, :settings
 
     def initialize(settings)

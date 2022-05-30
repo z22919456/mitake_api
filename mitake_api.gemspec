@@ -20,7 +20,6 @@ Gem::Specification.new do |spec|
     Dir['{app,config,db,lib}/**/*', 'MIT-LICENSE', 'Rakefile', 'README.md']
   end
 
-  spec.add_dependency 'action_message_texter', '~> 0.0.0'
   spec.add_dependency 'faraday', '~> 2.3.0'
   spec.add_dependency 'rails', '>= 5.0.0'
 end
