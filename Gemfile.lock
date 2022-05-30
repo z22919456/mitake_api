@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    mitake_api (0.0.3)
+    mitake_api (0.0.4)
       faraday (~> 2.3.0)
       rails (>= 5.0.0)
 

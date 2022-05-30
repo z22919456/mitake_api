@@ -16,8 +16,9 @@ module MitakeApi
       hash = {}
       hash[:uuid] = response_arr.shift.gsub(/\[|\]/, '')
       response_arr.each do |value|
-        keyValue = value.split('=')
-        hash[keyValue[0].underscore.to_sym] = value[1]
+        key_value = value.split('=')
+        hash[key_value[0].underscore.to_sym] = key_value[1]
+        hash[:response_message] = I18n.t(key_value[1], scope: %i[status_flag]) if key_value[0] == 'statuscode'
       end
       hash
     end
