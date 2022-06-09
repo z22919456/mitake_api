@@ -9,6 +9,7 @@ module MitakeApi
       @username = settings[:username]
       @password = settings[:password]
       @charset =  settings[:charset] || 'UTF8'
+      @callback_url = settings[:callback_url]
       @url = "https://#{settings[:url]&.gsub(%r{https?://}, '')}"
     end
 
@@ -33,7 +34,8 @@ module MitakeApi
     def credentials
       {
         username: @username,
-        password: @password
+        password: @password,
+        response: @callback_url
       }
     end
   end
