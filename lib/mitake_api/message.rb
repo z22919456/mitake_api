@@ -29,7 +29,7 @@ module MitakeApi
     def to_h
       {
         dstaddr: message.to,
-        dlvtime: message.deliver_at || '',
+        dlvtime: message.deliver_at.try(:strftime, '%Y%m%d%H%M%S') || '',
         smbody: message.content,
         clientid: message.uuid
       }
