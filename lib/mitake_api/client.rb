@@ -25,6 +25,9 @@ module MitakeApi
     private
 
     def connection
+      proxy = ENV['http_proxy'] || ENV['HTTP_PROXY']
+      options = { url: url }
+      options['proxy'] = proxy if proxy.present?
       @connection ||= Faraday.new(url: url) do |faraday|
         faraday.response :logger
         faraday.response :raise_error
