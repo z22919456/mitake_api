@@ -12,7 +12,7 @@ module MitakeApi
 
     def deliver!(message)
       @message = message
-      client = Client.new(url: @url, username: @username, password: @password)
+      client = Client.new(url: @url, username: @username, password: @password, callback_url: @callback_url)
       client.send_message(message)
     end
   end
